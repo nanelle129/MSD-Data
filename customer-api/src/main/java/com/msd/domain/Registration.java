@@ -2,10 +2,10 @@ package com.msd.domain;
 
 import java.util.Date;
 
+import javax.persistence.Column;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.ManyToOne;
 
 public class Registration {
 	@Id
@@ -13,13 +13,12 @@ public class Registration {
 	long id;
 	
 	// map a registration to an event and customer
-	@ManyToOne
-	Events event;
-	@ManyToOne
-	Customer customer;
-	
+	@Column(name="EVENT_ID")
 	String eventId;
+	
+	@Column(name="CUSTOMER_ID")
 	String customerId;
+	
 	Date registrationDate;
 	String notes;
 	
