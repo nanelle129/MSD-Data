@@ -1,7 +1,7 @@
 package com.msd.domain;
 
 import java.lang.String;
-import java.sql.Date;
+import java.util.Date;
 
 public class Registration {
 	
@@ -17,7 +17,7 @@ public class Registration {
 	}
 
 	public Registration(long id, String eventId, String customerId, Date registrationDate, String notes) {
-		super();
+		//super();
 		this.id = id;
 		this.eventId = eventId;
 		this.customerId = customerId;

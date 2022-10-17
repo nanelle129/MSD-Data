@@ -8,12 +8,14 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.msd.domain.Customer;
+
 @RestController
 @RequestMapping("/customers")
 public class CustomerApi {
 	ArrayList<Customer> customerList = new ArrayList<Customer>();
 	
-	public Customer API() {
+	public CustomerApi() {
 		Customer c1 = new Customer(1, "Austin", "pass", "austin@bah.com");
 		Customer c2 = new Customer(2, "Michael", "pass", "michael@bah.com");
 		Customer c3 = new Customer(3, "Timothy", "pass", "timothy@bah.com");
@@ -42,7 +44,7 @@ public class CustomerApi {
 	public Customer getCustomerById(@PathVariable("customerId") long id) {
 		
 		Customer customer = null;
-		for (int i; i < customerList.size(); i++) {
+		for (int i = 0; i < customerList.size(); i++) {
 			if (customerList.get(i).getId() == id) {
 				customer = customerList.get(i);
 			}

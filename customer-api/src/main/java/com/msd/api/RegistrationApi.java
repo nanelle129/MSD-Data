@@ -1,22 +1,24 @@
 package com.msd.api;
 
-import java.sql.Date;
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.Date;
 
-import org.springframework.boot.autoconfigure.security.oauth2.client.OAuth2ClientProperties.Registration;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.msd.domain.Registration;
+
 @RestController
-@RequestMapping("/registration")
+@RequestMapping("/registrations")
 public class RegistrationApi {
 
-	ArrayList<Registration> registrationList = newArrayList<Registration>();
+	ArrayList<Registration> registrationList = new ArrayList<Registration>();
 	
 	@SuppressWarnings("deprecation")
-	public RegistrationAPI() {
+	public RegistrationApi() {
 		Registration r1 = new Registration(1L, "1", "2", new Date(), "please email me the event details");
 		Registration r2 = new Registration(2L, "2", "2", new Date(), "send transportation and hotel booking");
 		Registration r3 = new Registration(3L, "3", "3", new Date(), "defer payments for a week");
@@ -41,13 +43,5 @@ public class RegistrationApi {
 		}
 		return registration;
 	}
-	//@Autowired
-	//RegistrationRepository repo;
 	
-	//@GetMapping
-	//public Iterable<Registration> getAll() {
-	//	return repo.findAll();
-	//}
-	
-	//@GetMapping("/{RegStatus}")
 }
