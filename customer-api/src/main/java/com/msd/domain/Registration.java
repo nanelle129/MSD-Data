@@ -12,7 +12,6 @@ public class Registration {
 	String notes;
 	
 	public Registration() {
-		super();
 		// TODO Auto-generated constructor stub
 	}
 
