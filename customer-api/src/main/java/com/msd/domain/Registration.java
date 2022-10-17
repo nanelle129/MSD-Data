@@ -1,11 +1,23 @@
 package com.msd.domain;
 
-import java.lang.String;
 import java.util.Date;
 
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.ManyToOne;
+
 public class Registration {
-	
+	@Id
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	long id;
+	
+	// map a registration to an event and customer
+	@ManyToOne
+	Events event;
+	@ManyToOne
+	Customer customer;
+	
 	String eventId;
 	String customerId;
 	Date registrationDate;
