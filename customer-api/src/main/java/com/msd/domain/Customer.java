@@ -7,8 +7,6 @@ public class Customer {
 	String email;
 	
 	
-	
-
 	public Customer() {
 		super();
 	}
