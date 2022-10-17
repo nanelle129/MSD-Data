@@ -1,13 +1,24 @@
 package com.msd.domain;
 
-import java.lang.String;
 import java.util.Date;
 
+import javax.persistence.Column;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
 public class Registration {
-	
+	@Id
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	long id;
+	
+	// map a registration to an event and customer
+	@Column(name="EVENT_ID")
 	String eventId;
+	
+	@Column(name="CUSTOMER_ID")
 	String customerId;
+	
 	Date registrationDate;
 	String notes;
 	
