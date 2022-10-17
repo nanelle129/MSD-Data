@@ -1,5 +1,8 @@
 package com.msd.repository;
 
-public class RegistrationRepository {
+import org.springframework.data.repository.CrudRepository;
+import com.msd.domain.Registration;
+
+public interface RegistrationRepository extends CrudRepository<Registration, Long> {
 
 }
