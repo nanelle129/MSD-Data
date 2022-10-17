@@ -1,32 +1,73 @@
 package com.msd.domain;
 
 import java.lang.String;
+import java.sql.Date;
 
 public class Registration {
 	
+	long id;
+	String eventId;
+	String customerId;
+	Date registrationDate;
+	String notes;
 	
-	private String name;
-	private String email;
-	private String phoneNumber;
+	public Registration() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
+	public Registration(long id, String eventId, String customerId, Date registrationDate, String notes) {
+		super();
+		this.id = id;
+		this.eventId = eventId;
+		this.customerId = customerId;
+		this.registrationDate = registrationDate;
+		this.notes = notes;
+	}
+
+	public long getId() {
+		return id;
+	}
+
+	public void setId(long id) {
+		this.id = id;
+	}
+
+	public String getEventId() {
+		return eventId;
+	}
+
+	public void setEventId(String eventId) {
+		this.eventId = eventId;
+	}
+
+	public String getCustomerId() {
+		return customerId;
+	}
+
+	public void setCustomerId(String customerId) {
+		this.customerId = customerId;
+	}
+
+	public Date getRegistrationDate() {
+		return registrationDate;
+	}
+
+	public void setRegistrationDate(Date registrationDate) {
+		this.registrationDate = registrationDate;
+	}
+
+	public String getNotes() {
+		return notes;
+	}
+
+	public void setNotes(String notes) {
+		this.notes = notes;
+	}
 	
-	public String getName() {
-		return name;
-	}
-	public void setName(String name) {
-		this.name = name;
-	}
-	public String getEmail() {
-		return email;
-	}
-	public void setEmail(String email) {
-		this.email = email;
-	}
-	public String getPhoneNumber() {
-		return phoneNumber;
-	}
-	public void setPhoneNumber(String phoneNumber) {
-		this.phoneNumber = phoneNumber;
-	}
+	
+	
+	
 	
 	
 
