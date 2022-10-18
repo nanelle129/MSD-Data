@@ -31,8 +31,8 @@ public class EventApi {
 		return repo.findAll();
 	}
 
-	@GetMapping("/{eventId}")
-	public Optional<Events> getEventById(@PathVariable("eventId") long id) {
+	@GetMapping("/{event_Id}")
+	public Optional<Events> getEventById(@PathVariable("event_Id") long id) {
 		return repo.findById(id);
 	}
 	
@@ -49,10 +49,10 @@ public class EventApi {
 		return response;
 	}
 
-	@PutMapping("/{eventId}")
+	@PutMapping("/{event_Id}")
 	public ResponseEntity<?> putEvent(
 			@RequestBody Events newEvent,
-			@PathVariable("eventId") long eventId) 
+			@PathVariable("event_Id") long eventId) 
 	{
 		if (newEvent.getId() != eventId || newEvent.getCode() == null || newEvent.getTitle() == null || newEvent.getDescription() == null) {
 			return ResponseEntity.badRequest().build();
@@ -61,8 +61,8 @@ public class EventApi {
 		return ResponseEntity.ok().build();
 	}	
 	
-	@DeleteMapping("/{eventId}")
-	public ResponseEntity<?> deleteEventById(@PathVariable("eventId") long id) {
+	@DeleteMapping("/{event_Id}")
+	public ResponseEntity<?> deleteEventById(@PathVariable("event_Id") long id) {
 		repo.deleteById(id);
 		return ResponseEntity.status(HttpStatus.NO_CONTENT).build();
 	}
