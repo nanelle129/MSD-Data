@@ -1,10 +1,10 @@
 package com.msd.domain;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 @Entity
@@ -14,23 +14,14 @@ public class Events {
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	long id;
 	
+	@Column(name="EVENT_CODE")
 	String code;
+	
 	String title;
+
 	String description;
 	
-	
-	
-	public Events() {
-		super();
-		// TODO Auto-generated constructor stub
-	}
-	public Events(long id, String code, String title, String description) {
-		super();
-		this.id = id;
-		this.code = code;
-		this.title = title;
-		this.description = description;
-	}
+
 	public long getId() {
 		return id;
 	}

@@ -22,18 +22,6 @@ public class Registration {
 	Date registrationDate;
 	String notes;
 	
-	public Registration() {
-		// TODO Auto-generated constructor stub
-	}
-
-	public Registration(long id, String eventId, String customerId, Date registrationDate, String notes) {
-		//super();
-		this.id = id;
-		this.eventId = eventId;
-		this.customerId = customerId;
-		this.registrationDate = registrationDate;
-		this.notes = notes;
-	}
 
 	public long getId() {
 		return id;
@@ -43,27 +31,27 @@ public class Registration {
 		this.id = id;
 	}
 
-	public String getEventId() {
+	public String getEvent_Id() {
 		return eventId;
 	}
 
-	public void setEventId(String eventId) {
+	public void setEvent_Id(String eventId) {
 		this.eventId = eventId;
 	}
 
-	public String getCustomerId() {
+	public String getCustomer_Id() {
 		return customerId;
 	}
 
-	public void setCustomerId(String customerId) {
+	public void setCustomer_Id(String customerId) {
 		this.customerId = customerId;
 	}
 
-	public Date getRegistrationDate() {
+	public Date getRegistration_Date() {
 		return registrationDate;
 	}
 
-	public void setRegistrationDate(Date registrationDate) {
+	public void setRegistration_Date(Date registrationDate) {
 		this.registrationDate = registrationDate;
 	}
 

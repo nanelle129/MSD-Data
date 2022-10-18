@@ -14,28 +14,19 @@ public class Customer {
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	long id;
 	
+	//link name of user
 	@Column(name="CUSTOMER_NAME")
 	String name;
+	
 	String password;
 	String email;
 	
-	
-	public Customer() {
-		super();
-	}
 	
 	public String toJSON() {
 		return "{\"id:\"" +id + ",\"name:\"" + name + ",\"password:\""  
 				+  ",\"email:\"" + email + "}";
 	}
 
-	public Customer(long id, String name, String password, String email) {
-		super();
-		this.id = id;
-		this.name = name;
-		this.password = password;
-		this.email = email;
-	}
 	
 	public long getId() {
 		return id;
