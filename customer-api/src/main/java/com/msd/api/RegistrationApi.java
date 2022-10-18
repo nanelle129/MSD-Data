@@ -27,7 +27,7 @@ public class RegistrationApi {
 	
 	@GetMapping
 	public Iterable<Registration> getAll() {
-		return repo.findall();
+		return repo.findAll();
 	}
 	
 	@GetMapping("{registrationId}")
