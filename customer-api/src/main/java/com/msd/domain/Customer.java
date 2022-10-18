@@ -8,14 +8,14 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name="CUSTOMERS")
+@Table(name="CUSTOMER")
 public class Customer {
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	long id;
 	
 	//link name of user
-	@Column(name="CUSTOMER_NAME")
+	@Column(name="NAME")
 	String name;
 	
 	String password;
