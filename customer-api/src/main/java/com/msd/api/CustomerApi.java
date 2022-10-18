@@ -19,6 +19,7 @@ import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 import org.springframework.web.util.UriComponentsBuilder;
 
 import com.msd.domain.Customer;
+import com.msd.logging.ApiLogger;
 import com.msd.repository.CustomersRepository;
 
 @RestController
