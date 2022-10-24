@@ -39,7 +39,6 @@ public class AuthFilter implements Filter{
 		else {
 			// check JWT token
 			String authheader = req.getHeader("authorization");
-			System.out.println("Check JWT Token from header [" + authheader + "]");
 			if (authheader != null && authheader.length() > 7
 				&& authheader.startsWith("Bearer")) {
 				String jwt_token = authheader.substring(7, authheader.length());
