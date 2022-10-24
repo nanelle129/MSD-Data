@@ -1,6 +1,6 @@
 node {
     stage('Checkout') {
-        git branch: 'master', url: 'https://github.com/nanelle129/MSD-Data.git'
+        git branch: 'main', url: 'https://github.com/nanelle129/MSD-Data.git'
     }
     
     stage('Gradle build') {
