@@ -4,15 +4,15 @@ node {
     }
     
     stage ("Gradle Build - DataApi") {
-        sh 'gradle -b project-mcc-data-service-crud/build.gradle clean build'
+        sh 'gradle clean build'
     }
     
     stage ("Gradle Bootjar-Package - DataApi") {
-        sh 'gradle -b project-mcc-data-service-crud/build.gradle bootjar'
+        sh 'gradle bootjar'
     }
     
     stage ("Containerize the app-docker build - DataApi") {
-        sh 'docker build --rm -t event-data:v1.0 -f project-mcc-data-service-crud/Dockerfile .'
+        sh 'docker build --rm -t event-data:v1.0 .'
         
     }
     
