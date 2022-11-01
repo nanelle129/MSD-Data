@@ -12,7 +12,8 @@ node {
     }
     
     stage ("Containerize the app-docker build - DataApi") {
-        sh 'docker -f project-mcc-data-service-crud/Dockerfile build --rm -t event-data:v1.0 .'
+        sh 'docker build --rm -t event-data:v1.0 -f project-mcc-data-service-crud/Dockerfile .'
+        
     }
     
     stage ("Inspect the docker image - DataApi"){
